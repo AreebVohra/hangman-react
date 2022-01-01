@@ -16,7 +16,7 @@ export function checkWin(correct, wrong, word) {
   });
   
   // Check for lose
-  if(wrong.length === 7) status = 'lose';
+  if(wrong.length === 8) status = 'lose';
 
   return status
 }

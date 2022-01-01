@@ -20,12 +20,12 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
   });
 
   return (
-    <div className="popup-container" style={finalMessage !== '' ? { display: 'flex' } : {}}>
-      <div className="popup">
+    <div style={finalMessage !== '' ? { display: 'flex' } : {}}>
+      <div>
         <h2>{finalMessage}</h2>
         <h3>{finalMessageRevealWord}</h3>
         <h3>Score is: {score}</h3>
-        <button onClick={playAgain}>Play Again</button>
+        <button onClick={playAgain}>Reset</button>
       </div>
     </div>
   )

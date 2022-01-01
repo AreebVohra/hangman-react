@@ -12,10 +12,6 @@ const WrongLetters = ({ wrongLetters, score }) => {
           .map((letter, i) => <span key={i}>{letter}</span>)
           .reduce((prev, curr) => prev === null ? [curr] : [prev, ', ', curr], null)}
       </div>
-      <div>
-        <p>Score</p>
-        <span>{score}</span>
-      </div>
     </div>
   )
 }
