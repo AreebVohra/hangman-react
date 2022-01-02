@@ -57,6 +57,27 @@ function App() {
     selectedWord = words[random];
   }
 
+  const handleChange = (event) => {
+    const { key, keyCode } = event;
+    if (playable && keyCode >= 65 && keyCode <= 90) {
+      const letter = key.toLowerCase();
+      if (selectedWord.includes(letter)) {
+        if (!correctLetters.includes(letter)) {
+          setCorrectLetters(currentLetters => [...currentLetters, letter]);
+        } else {
+          show(setShowNotification);
+        }
+      } else {
+        if (!wrongLetters.includes(letter)) {
+          setWrongLetters(currentLetters => [...currentLetters, letter]);
+          setScore(score - 20);
+        } else {
+          show(setShowNotification);
+        }
+      }
+    }
+  }
+
   return (
     <>
       <Header />
@@ -64,6 +85,7 @@ function App() {
         <Figure wrongLetters={wrongLetters} />
         <WrongLetters score={score} wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
+        <input type="text" value={correctLetters.toLocaleString()} onChange={handleChange}  />
       </div>
       <Popup
         score={score}
