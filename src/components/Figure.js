@@ -10,6 +10,7 @@ const hm7 = require('../images/hangman7.png');
 const hm8 = require('../images/hangman8.png');
 const gameover = require('../images/hangman9.png');
 
+// rendering the hangman image according to the number of incorrect gusses
 const Figure = ({ wrongLetters }) => {
   const errors = wrongLetters.length;
   const images = [hm1, hm2, hm3, hm4, hm5, hm6, hm7, hm8, gameover]

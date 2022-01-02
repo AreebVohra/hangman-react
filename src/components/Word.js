@@ -1,5 +1,6 @@
 import React from 'react';
 
+// rendering the list of correct words
 const Word = ({ selectedWord, correctLetters }) => {
 
   return (

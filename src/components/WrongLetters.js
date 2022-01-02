@@ -1,6 +1,7 @@
 import React from 'react'
 
-const WrongLetters = ({ wrongLetters, score }) => {
+// rendering the wrong list of words with commas ',' 
+const WrongLetters = ({ wrongLetters }) => {
 
   return (
     <div className="wrong-letters-container">

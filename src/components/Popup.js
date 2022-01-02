@@ -6,6 +6,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
   let finalMessageRevealWord = '';
   let playable = true;
 
+  // checking if the user wins or losses
   if (checkWin(correctLetters, wrongLetters, selectedWord) === 'win') {
     finalMessage = 'Congratulations! You won! 😃';
     playable = false;
